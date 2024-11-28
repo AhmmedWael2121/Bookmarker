@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+            rel="stylesheet">
+        <link rel="icon" href="./images/bookmark.png">
+        <link rel="stylesheet" href="./CSS/bootstrap.css">
+        <link rel="stylesheet" href="./CSS/all.min.css">
+        <link rel="stylesheet" href="./CSS/main.css">
+        <title>Bookmarker</title>
+    </head>
+
+    <body>
+        <section class="vh-100 mx-auto">
+            <div class="container p-5">
+                <div class="row p-5 d-flex justify-content-center align-item-center ">
+                    <div class="title-content col-md-12 ">
+                        <h1 class=" p-2 col-sm-6 text-center position-relative mx-auto title-txt">Bookmarker</h1>
+                    </div>
+                    <div class="col-md-12">
+                        <hr class="dotted-line">
+                        <div class="my-5 col-md-12 d-flex gap-1">
+                            <h2 class=" p-2 fs-2 col-md-6 text-center position-relative mx-auto">
+                                <i class="fa-solid fa-bookmark"></i>
+                                Bookmark your favorite sites
+                                <i class="fa-solid fa-bookmark"></i>
+                            </h2>
+                        </div>
+                        <div class="mb-3">
+                            <label for="bookmarkName" class="form-label fw-bold">Site Name</label>
+                            <input type="email" oninput="validateName(this)" class="form-control" id="bookmarkName" placeholder="Bookmark name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="bookmarkUrl" class="form-label fw-bold">URL</label>
+                            <input type="email" oninput="validateURL(this)" class="form-control" id="bookmarkUrl" placeholder="Website URL">
+                        </div>
+                        <div class="btn-content d-flex justify-content-center align-item-center">
+                            <button id="submit" onclick="addBookmark()"
+                                class="btn btn-danger px-5 fs-5 text-white text-center">Submit</button>
+                        </div>
+                        <hr class="dotted-line my-5">
+                    </div>
+
+                </div>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="text-center" scope="col">index</th>
+                            <th class="text-center" scope="col">Website</th>
+                            <th class="text-center" scope="col">visit</th>
+                            <th class="text-center" scope="col">delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="Content">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <script src="./JS/bootstrap.js"></script>
+        <script src="./JS/all.min.js"></script>
+        <script src="./JS/index.js"></script>
+    </body>
+
+</html>
